@@ -95,10 +95,17 @@ client.on('messageCreate', async message => {
         await addMessage(openAiThreadId, message.content);
     }
 
-    const run = await openai.beta.threads.runs.create(
-        openAiThreadId,
-        { assistant_id: process.env.ASSISTANT_ID }
-    )
+    const run = await openai.beta.threads.runs.create(openAiThreadId, {
+        assistant_id: process.env.ASSISTANT_ID,
+        max_completion_tokens: 500, //control for discord msg length limit
+        tools: [{ type: 'file_search' }],
+        tool_resources: {
+          file_search: {
+            vector_store_ids: [process.env.VECTOR_STORE_ID]
+          }
+        },
+        tool_choice: { type: 'file_search' }
+      });
     const status = await statusCheckLoop(openAiThreadId, run.id);
 
     const messages = await openai.beta.threads.messages.list(openAiThreadId);
