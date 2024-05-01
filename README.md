@@ -1,3 +1,12 @@
+# Example Usage
+
+Test case where the bot is equipped with a collection of management research papers to enable interactive literture disucssion on a Discord Server.
+![Screenshot20240501 102709@2x](https://github.com/linxule/openai-assistants-discord-bot/assets/43122877/decf90f7-99de-46ce-ba09-1d76b4f0d748)
+
+
+See below for installation and use guide from the original repo at https://github.com/VoloBuilds/openai-assistants-discord-bot.
+-----
+
 # NodeJS Discord Bot Using the new OpenAI Assistants API
 
 In this repo we integrate Discord.js with the new OpenAI Assistants API. The bot operates within Discord channels, listening to messages and using OpenAI to generate responses.
