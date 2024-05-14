@@ -16,3 +16,4 @@ jspm_packages/
 .env.production.local
 .env.local
 
+test.ipynb

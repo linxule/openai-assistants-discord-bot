@@ -32,7 +32,6 @@ const client = new Client({
 client.once('ready', async () => {
     await connectToMongo();
     console.log('Bot is ready!');
-    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 // Function to retrieve OpenAI Thread ID using MongoDB
