@@ -21,7 +21,7 @@
   "dependencies": {
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
-    "openai": "^4.16.2",
+    "openai": "4.46.1",
     "mongodb": "6.6.1"
   }
 }
